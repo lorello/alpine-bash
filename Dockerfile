@@ -1,5 +1,4 @@
-FROM alpine
-
+FROM docker:latest
 
 RUN apk add --no-cache \
 	bash \
@@ -11,7 +10,7 @@ RUN apk add --no-cache \
 	jq \
 	sed
 
-COPY welcome.txt /welcome.txt
+COPY bashrc $HOME/.profile
 
 ENTRYPOINT [ "/bin/bash" ]
 
