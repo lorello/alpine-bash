@@ -10,7 +10,5 @@ RUN apk add --no-cache \
 	jq \
 	sed
 
-COPY bashrc $HOME/.profile
-
 ENTRYPOINT [ "/bin/bash" ]
 
