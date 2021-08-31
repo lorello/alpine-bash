@@ -5,6 +5,7 @@ RUN apk add --no-cache \
 	bc \
 	coreutils \
 	curl \
+	httpie \
 	gawk \
 	grep \
 	jq \
