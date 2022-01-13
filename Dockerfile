@@ -5,11 +5,14 @@ RUN apk add --no-cache \
 	bc \
 	coreutils \
 	curl \
-	httpie \
 	gawk \
+	git \
 	grep \
 	jq \
-	sed
+	py-pip \
+	sed  && \
+	pip3 install --upgrade pip setuptools httpie && \
+    	rm -r /root/.cache
 
-ENTRYPOINT [ "/bin/bash" ]
+CMD [ "/bin/bash" ]
 
