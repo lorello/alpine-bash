@@ -14,5 +14,8 @@ RUN apk add --no-cache \
 	pip3 install --upgrade pip setuptools httpie && \
     	rm -r /root/.cache
 
+ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /usr/bin/wait-for-it
+RUN chmod +x /usr/bin/wait-for-it
+
 CMD [ "/bin/bash" ]
 
